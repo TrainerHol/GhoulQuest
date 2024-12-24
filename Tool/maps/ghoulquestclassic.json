@@ -1,0 +1,444 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "type": "summon",
+      "x": 478.38973129611037,
+      "y": 78.45833333333333,
+      "isStart": true,
+      "connections": [
+        39,
+        1
+      ]
+    },
+    {
+      "id": 1,
+      "type": "diversion",
+      "x": 478.5430944996324,
+      "y": 119.125,
+      "isStart": false,
+      "connections": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": 2,
+      "type": "damage",
+      "x": 478.6453366353137,
+      "y": 154.125,
+      "isStart": false,
+      "connections": [
+        3,
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "type": "healing",
+      "x": 478.6453366353137,
+      "y": 188.125,
+      "isStart": false,
+      "connections": [
+        2,
+        4
+      ]
+    },
+    {
+      "id": 4,
+      "type": "damage",
+      "x": 478.6453366353137,
+      "y": 222.72865120493148,
+      "isStart": false,
+      "connections": [
+        5,
+        3
+      ]
+    },
+    {
+      "id": 5,
+      "type": "aether",
+      "x": 511.5,
+      "y": 222.7256085341552,
+      "isStart": false,
+      "connections": [
+        4,
+        6
+      ]
+    },
+    {
+      "id": 6,
+      "type": "healing",
+      "x": 545.5,
+      "y": 222.72358008697105,
+      "isStart": false,
+      "connections": [
+        7,
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "type": "damage",
+      "x": 576.5,
+      "y": 222.72358008697105,
+      "isStart": false,
+      "connections": [
+        8,
+        6
+      ]
+    },
+    {
+      "id": 8,
+      "type": "healing",
+      "x": 606.8333333333334,
+      "y": 222.72358008697105,
+      "isStart": false,
+      "connections": [
+        9,
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "type": "damage",
+      "x": 606.8333333333334,
+      "y": 251.125,
+      "isStart": false,
+      "connections": [
+        10,
+        8
+      ]
+    },
+    {
+      "id": 10,
+      "type": "healing",
+      "x": 606.8333333333334,
+      "y": 278.5412644583312,
+      "isStart": false,
+      "connections": [
+        9,
+        11
+      ]
+    },
+    {
+      "id": 11,
+      "type": "diversion",
+      "x": 576.5,
+      "y": 278.5277107430552,
+      "isStart": false,
+      "connections": [
+        10,
+        12
+      ]
+    },
+    {
+      "id": 12,
+      "type": "treasure",
+      "x": 543.5,
+      "y": 278.5186749328712,
+      "isStart": false,
+      "connections": [
+        13,
+        11
+      ]
+    },
+    {
+      "id": 13,
+      "type": "damage",
+      "x": 513.5,
+      "y": 278.5186749328712,
+      "isStart": false,
+      "connections": [
+        12,
+        14
+      ]
+    },
+    {
+      "id": 14,
+      "type": "healing",
+      "x": 476.3126132533998,
+      "y": 278.5186749328712,
+      "isStart": false,
+      "connections": [
+        15,
+        13
+      ]
+    },
+    {
+      "id": 15,
+      "type": "damage",
+      "x": 476.30210220890007,
+      "y": 310.125,
+      "isStart": false,
+      "connections": [
+        14,
+        16
+      ]
+    },
+    {
+      "id": 16,
+      "type": "damage",
+      "x": 476.2950948459002,
+      "y": 344.125,
+      "isStart": false,
+      "connections": [
+        17,
+        15
+      ]
+    },
+    {
+      "id": 17,
+      "type": "diversion",
+      "x": 476.2950948459002,
+      "y": 371.125,
+      "isStart": false,
+      "connections": [
+        16,
+        18
+      ]
+    },
+    {
+      "id": 18,
+      "type": "treasure",
+      "x": 476.2950948459002,
+      "y": 403.7916666666667,
+      "isStart": false,
+      "connections": [
+        17,
+        19
+      ]
+    },
+    {
+      "id": 19,
+      "type": "damage",
+      "x": 440.5,
+      "y": 403.7916666666667,
+      "isStart": false,
+      "connections": [
+        20,
+        18
+      ]
+    },
+    {
+      "id": 20,
+      "type": "healing",
+      "x": 405.12688614540474,
+      "y": 403.7916666666667,
+      "isStart": false,
+      "connections": [
+        21,
+        19
+      ]
+    },
+    {
+      "id": 21,
+      "type": "summon",
+      "x": 405.1044810242342,
+      "y": 371.125,
+      "isStart": false,
+      "connections": [
+        20,
+        22
+      ]
+    },
+    {
+      "id": 22,
+      "type": "healing",
+      "x": 405.08954427678714,
+      "y": 337.125,
+      "isStart": false,
+      "connections": [
+        23,
+        21
+      ]
+    },
+    {
+      "id": 23,
+      "type": "damage",
+      "x": 405.08954427678714,
+      "y": 312.125,
+      "isStart": false,
+      "connections": [
+        22,
+        24
+      ]
+    },
+    {
+      "id": 24,
+      "type": "damage",
+      "x": 405.08954427678714,
+      "y": 275.3356216870734,
+      "isStart": false,
+      "connections": [
+        25,
+        23
+      ]
+    },
+    {
+      "id": 25,
+      "type": "treasure",
+      "x": 371.5,
+      "y": 275.3267702811789,
+      "isStart": false,
+      "connections": [
+        24,
+        26
+      ]
+    },
+    {
+      "id": 26,
+      "type": "healing",
+      "x": 333.5,
+      "y": 275.32086934391583,
+      "isStart": false,
+      "connections": [
+        27,
+        25
+      ]
+    },
+    {
+      "id": 27,
+      "type": "aether",
+      "x": 303.5,
+      "y": 275.32086934391583,
+      "isStart": false,
+      "connections": [
+        26,
+        28
+      ]
+    },
+    {
+      "id": 28,
+      "type": "summon",
+      "x": 270.1666666666667,
+      "y": 275.32086934391583,
+      "isStart": false,
+      "connections": [
+        29,
+        27
+      ]
+    },
+    {
+      "id": 29,
+      "type": "healing",
+      "x": 270.1666666666667,
+      "y": 244.125,
+      "isStart": false,
+      "connections": [
+        28,
+        30
+      ]
+    },
+    {
+      "id": 30,
+      "type": "diversion",
+      "x": 270.1666666666667,
+      "y": 209.73789776287492,
+      "isStart": false,
+      "connections": [
+        31,
+        29
+      ]
+    },
+    {
+      "id": 31,
+      "type": "healing",
+      "x": 302.5,
+      "y": 209.72714962714585,
+      "isStart": false,
+      "connections": [
+        30,
+        32
+      ]
+    },
+    {
+      "id": 32,
+      "type": "damage",
+      "x": 337.5,
+      "y": 209.71998420332648,
+      "isStart": false,
+      "connections": [
+        33,
+        31
+      ]
+    },
+    {
+      "id": 33,
+      "type": "damage",
+      "x": 369.5,
+      "y": 209.71998420332648,
+      "isStart": false,
+      "connections": [
+        32,
+        34
+      ]
+    },
+    {
+      "id": 34,
+      "type": "summon",
+      "x": 402.2146776406036,
+      "y": 209.71998420332648,
+      "isStart": false,
+      "connections": [
+        35,
+        33
+      ]
+    },
+    {
+      "id": 35,
+      "type": "healing",
+      "x": 403.19836915104406,
+      "y": 180.125,
+      "isStart": false,
+      "connections": [
+        34,
+        36
+      ]
+    },
+    {
+      "id": 36,
+      "type": "healing",
+      "x": 403.3623177361175,
+      "y": 149.125,
+      "isStart": false,
+      "connections": [
+        35,
+        37
+      ]
+    },
+    {
+      "id": 37,
+      "type": "damage",
+      "x": 403.3623177361175,
+      "y": 111.125,
+      "isStart": false,
+      "connections": [
+        38,
+        36
+      ]
+    },
+    {
+      "id": 38,
+      "type": "treasure",
+      "x": 403.3623177361175,
+      "y": 78.45833333333333,
+      "isStart": false,
+      "connections": [
+        37,
+        39
+      ]
+    },
+    {
+      "id": 39,
+      "type": "healing",
+      "x": 441.131164298317,
+      "y": 78.45833333333333,
+      "isStart": false,
+      "connections": [
+        0,
+        38
+      ]
+    }
+  ]
+}
