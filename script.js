@@ -68,7 +68,7 @@ async function init() {
     // Load all deck data
     const decks = ["treasure", "aether", "diversion", "summon", "achievements"];
     for (const deck of decks) {
-      const response = await fetch(`../DiscordBot/decks/${deck}.json`);
+      const response = await fetch(`DiscordBot/decks/${deck}.json`);
       gameState.deckData[deck] = await response.json();
     }
     gameState.treasureData = gameState.deckData.treasure;
@@ -959,7 +959,7 @@ function updateAchievementDescription(playerIndex, achievementId, description) {
 
 async function loadMap(mapName) {
   try {
-    const response = await fetch(`maps/${mapName}.json`);
+    const response = await fetch(`Tool/maps/${mapName}.json`);
     const mapData = await response.json();
     currentMap = mapData;
     startNode = mapData.nodes.findIndex((node) => node.isStart);
