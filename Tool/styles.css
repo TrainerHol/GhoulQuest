@@ -533,3 +533,213 @@ button:hover {
 #nextRoundBtn.ready:hover {
   background: linear-gradient(45deg, #e6c200, #cca900);
 }
+
+.achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.add-achievement-btn {
+  background-color: #2d2d2d;
+  border: 2px dashed #4a4a4a;
+  color: #888;
+  padding: 8px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-achievement-btn:hover {
+  background-color: #3d3d3d;
+  color: white;
+}
+
+.achievement-slot {
+  background-color: #3d3d3d;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 0.9em;
+  min-height: 40px;
+  position: relative;
+}
+
+.achievement-slot.empty {
+  border: 2px dashed #4a4a4a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+}
+
+.achievement-slot:hover {
+  background-color: #4a4a4a;
+}
+
+.achievement-info {
+  position: relative;
+}
+
+.achievement-info h4 {
+  margin-bottom: 4px;
+  font-size: 0.95em;
+  color: #ffd700;
+}
+
+.achievement-description {
+  font-size: 0.85em;
+  color: #ccc;
+  min-height: 1.6em;
+  outline: none;
+}
+
+.achievement-description:focus {
+  background-color: #2d2d2d;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+.swap-achievement {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2px 4px;
+  font-size: 0.8em;
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.achievement-slot:hover .swap-achievement {
+  opacity: 1;
+}
+
+.swap-achievement:hover {
+  color: #ffd700;
+  background: none;
+}
+
+/* Remove unused styles */
+.add-achievement-btn,
+.achievement-notes {
+  display: none;
+}
+
+.achievement-item {
+  background-color: #3d3d3d;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-left: 4px solid #ffd700;
+}
+
+.achievement-item:hover {
+  background-color: #4a4a4a;
+}
+
+.achievement-item h4 {
+  color: #ffd700;
+  margin-bottom: 4px;
+  font-size: 0.95em;
+}
+
+.achievement-item p {
+  font-size: 0.85em;
+  color: #ccc;
+}
+
+.achievement-search input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #3d3d3d;
+  border: 1px solid #4a4a4a;
+  color: white;
+  border-radius: 4px;
+}
+
+.achievement-list {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+/* Player card achievement styles */
+.achievement-slot {
+  background-color: #3d3d3d;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 0.9em;
+  min-height: 40px;
+  position: relative;
+}
+
+.achievement-slot.empty {
+  border: 2px dashed #4a4a4a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+}
+
+.achievement-slot:hover {
+  background-color: #4a4a4a;
+}
+
+.achievement-info {
+  position: relative;
+}
+
+.achievement-info h4 {
+  margin-bottom: 4px;
+  font-size: 0.95em;
+  color: #ffd700;
+}
+
+.achievement-description {
+  font-size: 0.85em;
+  color: #ccc;
+  min-height: 1.6em;
+  outline: none;
+}
+
+.achievement-description:focus {
+  background-color: #2d2d2d;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+.swap-achievement {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2px 4px;
+  font-size: 0.8em;
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.achievement-slot:hover .swap-achievement {
+  opacity: 1;
+}
+
+.swap-achievement:hover {
+  color: #ffd700;
+  background: none;
+}

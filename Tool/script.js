@@ -16,7 +16,7 @@ let pendingStateChange = false;
 async function init() {
   try {
     // Load all deck data
-    const decks = ["treasure", "aether", "diversion", "summon"];
+    const decks = ["treasure", "aether", "diversion", "summon", "achievements"];
     for (const deck of decks) {
       const response = await fetch(`../DiscordBot/decks/${deck}.json`);
       gameState.deckData[deck] = await response.json();
@@ -94,6 +94,7 @@ function createPlayer(name = "") {
     score: 15,
     shield: 0,
     treasures: [null, null],
+    achievements: [],
     effects: [],
     turnComplete: false,
   };
@@ -151,6 +152,9 @@ function renderPlayers() {
             <input type="number" value="${player.shield}" 
                    onchange="updatePlayerShield(${index}, this.value)">
           </div>
+        </div>
+        <div class="achievements">
+          ${player.achievements && player.achievements.length > 0 ? `<div class="achievement-slot">${renderAchievement(player.achievements[0])}</div>` : `<div class="achievement-slot empty" onclick="openAchievementModal(${index})">Add Achievement</div>`}
         </div>
         <div class="treasures">
           <div class="treasure-slot ${!player.treasures[0] ? "empty" : ""}" 
@@ -478,10 +482,16 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("closeTreasureModal").addEventListener("click", () => {
     document.getElementById("treasureModal").style.display = "none";
   });
+  document.getElementById("closeAchievementModal").addEventListener("click", () => {
+    document.getElementById("achievementModal").style.display = "none";
+  });
 
   // Search inputs
   document.getElementById("treasureSearch").addEventListener("input", (e) => {
     renderTreasureList(e.target.value);
+  });
+  document.getElementById("achievementSearch")?.addEventListener("input", (e) => {
+    renderAchievementList(e.target.value);
   });
 
   // Close modals when clicking outside
@@ -741,5 +751,73 @@ function validateHP(playerIndex, input) {
   } else {
     // Reset to previous value
     input.value = gameState.players[playerIndex].score;
+  }
+}
+
+// Add achievement handling
+function renderAchievement(achievement) {
+  return `
+        <div class="achievement-info">
+            <h4>${achievement.name}</h4>
+            <div class="achievement-description" 
+                 contenteditable="true" 
+                 onblur="updateAchievementDescription(${achievement.playerIndex}, ${achievement.id}, this.textContent)">${achievement.description}</div>
+            <button class="swap-achievement" onclick="openAchievementModal(${achievement.playerIndex})">↺</button>
+        </div>
+    `;
+}
+
+function openAchievementModal(playerIndex) {
+  const modal = document.getElementById("achievementModal");
+  modal.style.display = "block";
+  modal.dataset.playerIndex = playerIndex;
+  renderAchievementList();
+}
+
+function renderAchievementList(searchTerm = "") {
+  const achievementList = document.getElementById("achievementList");
+  const achievements = gameState.deckData.achievements || [];
+
+  const filteredAchievements = achievements.filter((a) => !searchTerm || a.Achievement.toLowerCase().includes(searchTerm.toLowerCase()) || (a.Objective && a.Objective.toLowerCase().includes(searchTerm.toLowerCase())));
+
+  achievementList.innerHTML = filteredAchievements
+    .map(
+      (achievement) => `
+    <div class="achievement-item" onclick="selectAchievement('${achievement.Achievement}')">
+        <h4>${achievement.Achievement}</h4>
+        <p>${achievement.Objective || ""}</p>
+    </div>
+  `
+    )
+    .join("");
+}
+
+function selectAchievement(achievementName) {
+  const modal = document.getElementById("achievementModal");
+  const playerIndex = parseInt(modal.dataset.playerIndex);
+
+  const achievement = gameState.deckData.achievements.find((a) => a.Achievement === achievementName);
+  if (achievement) {
+    const achievementCopy = {
+      name: achievement.Achievement,
+      description: achievement.Objective,
+      playerIndex,
+      id: Date.now(),
+    };
+
+    // Replace any existing achievement
+    gameState.players[playerIndex].achievements = [achievementCopy];
+    saveState();
+    renderPlayers();
+  }
+
+  modal.style.display = "none";
+}
+
+function updateAchievementDescription(playerIndex, achievementId, description) {
+  const achievement = gameState.players[playerIndex].achievements.find((a) => a.id === achievementId);
+  if (achievement) {
+    achievement.description = description;
+    debouncedSave();
   }
 }
