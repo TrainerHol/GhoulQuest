@@ -266,8 +266,8 @@ button:hover {
 }
 
 .effect-option.treasure .effect-content {
-  color: #000;
-  background-color: rgba(255, 255, 255, 0.9);
+  color: #ffd700;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .effect-option.aether {
@@ -279,8 +279,8 @@ button:hover {
 }
 
 .effect-option.diversion .effect-content {
-  color: #000;
-  background-color: rgba(255, 255, 255, 0.9);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .effect-option:hover {
@@ -842,4 +842,175 @@ button:hover {
   height: 12px;
   border-radius: 50%;
   display: inline-block;
+}
+
+/* Input styling */
+input[type="text"],
+input[type="number"],
+input[type="search"],
+select {
+  padding: 8px 12px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background: #2a2a2a;
+  color: #fff;
+  font-size: 14px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+select:focus {
+  outline: none;
+  border-color: #666;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+/* Effect types in modal */
+.effect-option {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.effect-option:hover {
+  transform: translateX(5px);
+}
+
+.effect-option.treasure {
+  background: #2a2a2a;
+  color: #ffc107;
+}
+
+.effect-option.diversion {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.effect-option.summon {
+  background: #4a1c4a;
+  color: #fff;
+}
+
+.effect-option.aether {
+  background: #1c4a4a;
+  color: #fff;
+}
+
+.effect-option.custom {
+  background: #2d2d2d;
+  color: #fff;
+}
+
+/* Modal content */
+.modal-content {
+  background: #333;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  color: #fff;
+}
+
+.effect-search,
+.treasure-search,
+.achievement-search {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.effect-search input,
+.treasure-search input,
+.achievement-search input,
+.custom-effect input {
+  flex: 1;
+  background: #2a2a2a;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+/* Player count styling */
+.player-count input {
+  width: 60px;
+  background: #2a2a2a;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.player-count input:focus {
+  outline: none;
+  border-color: #666;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+/* Custom effect section */
+.custom-effect {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #2d2d2d;
+  border-radius: 4px;
+}
+
+.custom-effect input[type="number"] {
+  width: 80px;
+}
+
+/* Effect list scrolling */
+.effect-list {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.effect-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.effect-list::-webkit-scrollbar-track {
+  background: #2a2a2a;
+  border-radius: 4px;
+}
+
+.effect-list::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+
+.effect-list::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* Input styling consistency */
+.effect-search input,
+.treasure-search input,
+.achievement-search input,
+.custom-effect input,
+.player-count input,
+select#effectTarget {
+  background-color: #3d3d3d;
+  border: 1px solid #4a4a4a;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.effect-search input:focus,
+.treasure-search input:focus,
+.achievement-search input:focus,
+.custom-effect input:focus,
+.player-count input:focus,
+select#effectTarget:focus {
+  border-color: #666;
+  outline: none;
 }
