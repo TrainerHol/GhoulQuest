@@ -47,6 +47,29 @@
           </div>
         </div>
 
+        <!-- Map Section -->
+        <div class="map-section">
+          <div class="map-header">
+            <h3>Game Map</h3>
+            <div class="map-controls">
+              <select id="mapSelect">
+                <option value="custom">Custom Map</option>
+                <option value="ghoulquestclassic">Classic</option>
+                <option value="ghoulquestforest">Forest</option>
+                <option value="ghoulquestsiege">Siege</option>
+                <option value="ghoulquestlarge">Large</option>
+              </select>
+              <input type="file" id="customMapInput" accept=".json" style="display: none" />
+              <button id="loadCustomMapBtn">Load Custom</button>
+              <button id="shuffleStartBtn">Shuffle Start</button>
+              <button id="randomSpaceBtn">Random Space</button>
+            </div>
+          </div>
+          <div class="map-display">
+            <canvas id="mapCanvas" width="800" height="600"></canvas>
+          </div>
+        </div>
+
         <!-- Effect Selection Modal -->
         <div id="effectModal" class="modal">
           <div class="modal-content">

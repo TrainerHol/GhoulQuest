@@ -743,3 +743,103 @@ button:hover {
   color: #ffd700;
   background: none;
 }
+
+/* Map Section Styles */
+.map-section {
+  background-color: #2d2d2d;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.map-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.map-controls select {
+  background-color: #3d3d3d;
+  border: 1px solid #4a4a4a;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.map-display {
+  display: flex;
+  justify-content: center;
+  background-color: #1a1a1a;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+#mapCanvas {
+  background-color: #1a1a1a;
+  border-radius: 4px;
+}
+
+/* Rainbow glow animation for start space */
+@keyframes rainbowGlow {
+  0% {
+    box-shadow: 0 0 10px #ff0000;
+  }
+  17% {
+    box-shadow: 0 0 10px #ff8800;
+  }
+  33% {
+    box-shadow: 0 0 10px #ffff00;
+  }
+  50% {
+    box-shadow: 0 0 10px #00ff00;
+  }
+  67% {
+    box-shadow: 0 0 10px #0088ff;
+  }
+  83% {
+    box-shadow: 0 0 10px #8800ff;
+  }
+  100% {
+    box-shadow: 0 0 10px #ff0000;
+  }
+}
+
+/* Context menu for map spaces */
+.map-context-menu {
+  position: fixed;
+  background-color: #2d2d2d;
+  border: 1px solid #4a4a4a;
+  border-radius: 4px;
+  padding: 5px 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.map-context-menu-item {
+  padding: 8px 15px;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.map-context-menu-item:hover {
+  background-color: #4a4a4a;
+}
+
+.color-preview {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}

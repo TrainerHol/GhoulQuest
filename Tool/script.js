@@ -12,6 +12,56 @@ let gameState = {
 let debounceTimer = null;
 let pendingStateChange = false;
 
+// Map functionality
+let currentMap = null;
+let startNode = null;
+let highlightedNode = null;
+let nodeGlows = new Map(); // Store node glow colors
+
+// Define colors for map node types
+const colors = {
+  healing: "#4CAF50", // Green
+  damage: "#f44336", // Red
+  summon: "#9C27B0", // Purple
+  treasure: "#FFC107", // Yellow
+  diversion: "#FFFFFF", // White
+  cannon: "#000000", // Black
+  aether: "#03A9F4", // Light Blue
+};
+
+// Create map context menu
+const mapContextMenu = document.createElement("div");
+mapContextMenu.className = "map-context-menu";
+mapContextMenu.innerHTML = `
+  <div class="map-context-menu-item" data-action="start">
+    Set as Start Point
+  </div>
+  <div class="map-context-menu-item" data-action="glow-red">
+    <span class="color-preview" style="background: #ff0000;"></span>
+    Red Glow
+  </div>
+  <div class="map-context-menu-item" data-action="glow-white">
+    <span class="color-preview" style="background: #ffffff;"></span>
+    White Glow
+  </div>
+  <div class="map-context-menu-item" data-action="glow-purple">
+    <span class="color-preview" style="background: #800080;"></span>
+    Purple Glow
+  </div>
+  <div class="map-context-menu-item" data-action="glow-green">
+    <span class="color-preview" style="background: #00ff00;"></span>
+    Green Glow
+  </div>
+  <div class="map-context-menu-item" data-action="glow-blue">
+    <span class="color-preview" style="background: #0088ff;"></span>
+    Blue Glow
+  </div>
+  <div class="map-context-menu-item" data-action="clear">
+    Clear Glow
+  </div>
+`;
+document.body.appendChild(mapContextMenu);
+
 // Initialize the application
 async function init() {
   try {
@@ -500,6 +550,91 @@ document.addEventListener("DOMContentLoaded", () => {
       e.target.style.display = "none";
     }
   });
+
+  // Map controls
+  document.getElementById("mapSelect").addEventListener("change", (e) => {
+    if (e.target.value === "custom") {
+      document.getElementById("customMapInput").click();
+    } else {
+      loadMap(e.target.value);
+    }
+  });
+
+  document.getElementById("customMapInput").addEventListener("change", (e) => {
+    if (e.target.files[0]) {
+      loadCustomMap(e.target.files[0]);
+    }
+  });
+
+  document.getElementById("loadCustomMapBtn").addEventListener("click", () => {
+    document.getElementById("customMapInput").click();
+  });
+
+  document.getElementById("shuffleStartBtn").addEventListener("click", shuffleStart);
+  document.getElementById("randomSpaceBtn").addEventListener("click", randomSpace);
+
+  // Map canvas context menu
+  const mapCanvas = document.getElementById("mapCanvas");
+  mapCanvas.addEventListener("contextmenu", (e) => {
+    e.preventDefault();
+    const rect = mapCanvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const clickedNode = findClickedNode(x, y);
+
+    if (clickedNode !== -1) {
+      showContextMenu(e, clickedNode);
+    }
+  });
+
+  // Handle context menu actions
+  mapContextMenu.addEventListener("click", (e) => {
+    const action = e.target.closest(".map-context-menu-item")?.dataset.action;
+    const nodeIndex = parseInt(mapContextMenu.dataset.nodeIndex);
+
+    if (action && !isNaN(nodeIndex)) {
+      switch (action) {
+        case "start":
+          startNode = nodeIndex;
+          break;
+        case "glow-red":
+          nodeGlows.set(nodeIndex, "#ff0000");
+          break;
+        case "glow-white":
+          nodeGlows.set(nodeIndex, "#ffffff");
+          break;
+        case "glow-purple":
+          nodeGlows.set(nodeIndex, "#800080");
+          break;
+        case "glow-green":
+          nodeGlows.set(nodeIndex, "#00ff00");
+          break;
+        case "glow-blue":
+          nodeGlows.set(nodeIndex, "#0088ff");
+          break;
+        case "clear":
+          nodeGlows.delete(nodeIndex);
+          // Clear start point if this is the start node
+          if (startNode === nodeIndex) {
+            startNode = -1;
+          }
+          // Clear highlight if this is the highlighted node
+          if (highlightedNode === nodeIndex) {
+            highlightedNode = -1;
+          }
+          break;
+      }
+    }
+    mapContextMenu.style.display = "none";
+  });
+
+  // Hide context menu when clicking outside
+  document.addEventListener("click", () => {
+    mapContextMenu.style.display = "none";
+  });
+
+  // Load default map
+  loadMap("ghoulquestclassic");
 });
 
 // Helper functions
@@ -820,4 +955,228 @@ function updateAchievementDescription(playerIndex, achievementId, description) {
     achievement.description = description;
     debouncedSave();
   }
+}
+
+async function loadMap(mapName) {
+  try {
+    const response = await fetch(`maps/${mapName}.json`);
+    const mapData = await response.json();
+    currentMap = mapData;
+    startNode = mapData.nodes.findIndex((node) => node.isStart);
+    nodeGlows.clear();
+    drawMap();
+  } catch (error) {
+    console.error("Error loading map:", error);
+  }
+}
+
+function loadCustomMap(file) {
+  const reader = new FileReader();
+  reader.onload = function (e) {
+    try {
+      const mapData = JSON.parse(e.target.result);
+      currentMap = mapData;
+      startNode = mapData.nodes.findIndex((node) => node.isStart);
+      nodeGlows.clear();
+      drawMap();
+    } catch (error) {
+      console.error("Error parsing custom map:", error);
+    }
+  };
+  reader.readAsText(file);
+}
+
+function drawMap() {
+  if (!currentMap) return;
+
+  const canvas = document.getElementById("mapCanvas");
+  const ctx = canvas.getContext("2d");
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Calculate actual map bounds
+  const bounds = currentMap.nodes.reduce(
+    (acc, node) => ({
+      minX: Math.min(acc.minX, node.x),
+      maxX: Math.max(acc.maxX, node.x),
+      minY: Math.min(acc.minY, node.y),
+      maxY: Math.max(acc.maxY, node.y),
+    }),
+    {
+      minX: Infinity,
+      maxX: -Infinity,
+      minY: Infinity,
+      maxY: -Infinity,
+    }
+  );
+
+  // Calculate map dimensions
+  const mapWidth = bounds.maxX - bounds.minX;
+  const mapHeight = bounds.maxY - bounds.minY;
+
+  // Calculate scale with padding
+  const padding = 60; // Increased padding for better visibility
+  const scale = Math.min((canvas.width - padding * 2) / mapWidth, (canvas.height - padding * 2) / mapHeight);
+
+  // Calculate offsets to center the map
+  const offsetX = (canvas.width - mapWidth * scale) / 2 - bounds.minX * scale;
+  const offsetY = (canvas.height - mapHeight * scale) / 2 - bounds.minY * scale;
+
+  // Draw connections
+  currentMap.nodes.forEach((node) => {
+    node.connections.forEach((targetIndex) => {
+      const target = currentMap.nodes[targetIndex];
+      ctx.beginPath();
+      ctx.strokeStyle = "#666";
+      ctx.lineWidth = 1;
+      ctx.moveTo(node.x * scale + offsetX, node.y * scale + offsetY);
+      ctx.lineTo(target.x * scale + offsetX, target.y * scale + offsetY);
+      ctx.stroke();
+    });
+  });
+
+  // Draw nodes
+  currentMap.nodes.forEach((node, index) => {
+    const x = node.x * scale + offsetX;
+    const y = node.y * scale + offsetY;
+    const radius = 15;
+
+    // Draw glow if present
+    const glowColor = nodeGlows.get(index);
+    if (glowColor) {
+      ctx.beginPath();
+      ctx.arc(x, y, radius + 5, 0, Math.PI * 2);
+      ctx.fillStyle = glowColor + "33"; // Add transparency
+      ctx.fill();
+    }
+
+    // Draw node
+    ctx.beginPath();
+    ctx.arc(x, y, radius, 0, Math.PI * 2);
+    ctx.fillStyle = colors[node.type];
+    ctx.fill();
+    ctx.strokeStyle = "#000";
+    ctx.lineWidth = 1;
+    ctx.stroke();
+
+    // Draw node number
+    ctx.fillStyle = getContrastColor(colors[node.type]);
+    ctx.font = "10px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(index, x, y);
+
+    // Draw start indicator
+    if (index === startNode) {
+      ctx.save();
+      ctx.strokeStyle = `hsl(${(Date.now() / 20) % 360}, 100%, 50%)`; // Rainbow effect
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.arc(x, y, radius + 5, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    // Draw highlighted node
+    if (index === highlightedNode) {
+      ctx.save();
+      ctx.strokeStyle = "#fff";
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.arc(x, y, radius + 5, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.restore();
+    }
+  });
+
+  requestAnimationFrame(drawMap);
+}
+
+function findClickedNode(x, y) {
+  if (!currentMap) return -1;
+
+  const canvas = document.getElementById("mapCanvas");
+
+  // Calculate bounds
+  const bounds = currentMap.nodes.reduce(
+    (acc, node) => ({
+      minX: Math.min(acc.minX, node.x),
+      maxX: Math.max(acc.maxX, node.x),
+      minY: Math.min(acc.minY, node.y),
+      maxY: Math.max(acc.maxY, node.y),
+    }),
+    {
+      minX: Infinity,
+      maxX: -Infinity,
+      minY: Infinity,
+      maxY: -Infinity,
+    }
+  );
+
+  const mapWidth = bounds.maxX - bounds.minX;
+  const mapHeight = bounds.maxY - bounds.minY;
+
+  const padding = 60;
+  const scale = Math.min((canvas.width - padding * 2) / mapWidth, (canvas.height - padding * 2) / mapHeight);
+
+  const offsetX = (canvas.width - mapWidth * scale) / 2 - bounds.minX * scale;
+  const offsetY = (canvas.height - mapHeight * scale) / 2 - bounds.minY * scale;
+
+  for (let i = 0; i < currentMap.nodes.length; i++) {
+    const node = currentMap.nodes[i];
+    const nodeX = node.x * scale + offsetX;
+    const nodeY = node.y * scale + offsetY;
+    const distance = Math.sqrt(Math.pow(x - nodeX, 2) + Math.pow(y - nodeY, 2));
+    if (distance <= 15) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+function shuffleStart() {
+  if (!currentMap || !currentMap.nodes.length) return;
+  startNode = Math.floor(Math.random() * currentMap.nodes.length);
+}
+
+function randomSpace() {
+  if (!currentMap || !currentMap.nodes.length) return;
+  highlightedNode = Math.floor(Math.random() * currentMap.nodes.length);
+}
+
+// Update context menu positioning
+function showContextMenu(e, nodeIndex) {
+  const menu = mapContextMenu;
+  menu.style.display = "block";
+
+  // Get viewport dimensions
+  const viewportWidth = window.innerWidth;
+  const viewportHeight = window.innerHeight;
+
+  // Get menu dimensions
+  const menuRect = menu.getBoundingClientRect();
+
+  // Calculate position
+  let left = e.clientX;
+  let top = e.clientY;
+
+  // Adjust if menu would go off screen
+  if (left + menuRect.width > viewportWidth) {
+    left = viewportWidth - menuRect.width - 5;
+  }
+  if (top + menuRect.height > viewportHeight) {
+    top = viewportHeight - menuRect.height - 5;
+  }
+
+  menu.style.left = left + "px";
+  menu.style.top = top + "px";
+  menu.dataset.nodeIndex = nodeIndex;
+}
+
+// Helper function to get contrasting text color
+function getContrastColor(bgColor) {
+  const r = parseInt(bgColor.slice(1, 3), 16);
+  const g = parseInt(bgColor.slice(3, 5), 16);
+  const b = parseInt(bgColor.slice(5, 7), 16);
+  const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+  return brightness > 128 ? "#000" : "#fff";
 }
