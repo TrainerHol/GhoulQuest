@@ -1,0 +1,347 @@
+[
+  {
+    "Name": "Eos’s Fey Blessing",
+    "Effect": "You and everyone within 10 spaces gains 6 points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728405412491034664/EosFeyBlessing.png"
+  },
+  {
+    "Name": "Selene’s Fey Wind",
+    "Effect": "You and everyone within 10 spaces gains 2 extra movement spaces during their next turn.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728405950633082921/SelenesFeyWind.png"
+  },
+  {
+    "Name": "Shiva’s Dreams of Ice",
+    "Effect": "You gain +1 to attack rolls in duels until the end of the game or until the next time you become unconscious.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728673985478262865/ShivasDreamsofIce.png"
+  },
+  {
+    "Name": "Shiva’s Absolute Zero",
+    "Effect": "Everyone rolls /dice. The player with the lowest roll gets frozen and loses 2 turns.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728678404332978267/ShivasAbsoluteZero.png"
+  },
+  {
+    "Name": "Shiva’s Glass Dance",
+    "Effect": "Choose a player and then roll for damage. That player takes damage equal to three times your roll and is then knocked back the same number of spaces. If you roll a 1 or below, the player rolls instead and the effect applies to you.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728709201723129937/ShivasGlassDance.png"
+  },
+  {
+    "Name": "Shiva’s Diamond Dust",
+    "Effect": "The player with the lowest points is surrounded by ice aether for 4 rounds. By the end of the 4th round of this effect if the player hasn’t lost a duel, everyone else takes 31 damage. If the player loses a duel, they will take an additional 31 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728804805002264576/ShivasDiamondDust.png"
+  },
+  {
+    "Name": "The Pale Rider’s Valfodr",
+    "Effect": "At the end of the next round, all players between this space and the player who triggered this effect take 4 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728407275428905000/PaleRider.png"
+  },
+  {
+    "Name": "Typhon’s Snort",
+    "Effect": "Everyone gets pushed 2 spaces away from your direction without activating the effects.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728408131163521085/TyphonSnort.png"
+  },
+  {
+    "Name": "Ifrit’s Crimson Cyclone",
+    "Effect": "Any players within 5 spaces of a summon space take 5 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728807796505837599/IfritCrimsonCyclone.png"
+  },
+  {
+    "Name": "Ifrit’s Eruption",
+    "Effect": "Any players currently standing in a red space take 5 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728808317744578610/IfritsEruption.png"
+  },
+  {
+    "Name": "Ifrit’s Searing Wind",
+    "Effect": "This targets the player with the lowest points. For 4 rounds, whenever that player gains points, every player is knocked back 1 space away from that person’s direction without activating effects and takes 1 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728808714672537651/IfritsSearingWind.png"
+  },
+  {
+    "Name": "Ifrit’s Infernal Fetters",
+    "Effect": "The two players with the highest scores get tethered together. At the end of 5 rounds, they both take damage equal to the number of spaces in between them.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728809077412593734/IfritInfernalFetters.png"
+  },
+  {
+    "Name": "Garuda’s Mistral Song",
+    "Effect": "Everyone else not standing in a healing space takes 5 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728810377298575400/GarudasMistralSong.png"
+  },
+  {
+    "Name": "Garuda’s Mistral Shriek",
+    "Effect": "You get teleported to the next summon space without activating it. Players within 10 spaces of you take 3 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728820166837796924/GarudasMistralShriek.png"
+  },
+  {
+    "Name": "Garuda’s Gigastorm",
+    "Effect": "A menacing wind surrounds you for 3 rounds. The wind dissipates if you land in a damage space. If it does not dissipate by the end of the third round, you and everyone within 15 spaces around you have their points reduced to 3 and their treasures lost.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728821602564702248/GarudasGigastorm.png"
+  },
+  {
+    "Name": "Titan’s Gaol",
+    "Effect": "Everyone rolls and if they roll under 4, they become trapped in a gaol. At the beginning of each of their turns, they may roll again to escape (must roll 4+) and if not freed, they receive 5 damage and take no actions. If another player passes or lands on that person’s space, it breaks the gaol and both players take 3 damage. This effect lasts until the player is freed or falls unconscious.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728824504381472778/TitansGaol.png"
+  },
+  {
+    "Name": "Titan’s Landslide",
+    "Effect": "Pick a player. That player takes 5 damage and is taken back to the first square.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728829409242644543/TitansLandslideGood.png"
+  },
+  {
+    "Name": "Titan’s Landslide",
+    "Effect": "You take 5 damage and go back to the first square.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728828821310275714/TitansLandslide.png"
+  },
+  {
+    "Name": "Titan’s Protective Gaol",
+    "Effect": "You are surrounded in a rock armor that will absorb 10 points of damage and then break. If by the end of 5 rounds it hasn't broken, you take 10 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728824788147241010/TitansProtectiveGaol.png"
+  },
+  {
+    "Name": "Titan’s Weight of the Land",
+    "Effect": "For 2 rounds, anyone who rolls below 5 movement spaces takes 5 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728830782558437476/TitansWeightOfTheLand.png"
+  },
+  {
+    "Name": "Ramuh’s Judgement Bolt",
+    "Effect": "All players who are in a healing space gain 20 points. All players who are in a damaging space take 20 damage. The player who landed on this space then rolls /dice, if you roll above 5 you gain 20 points, if not you take 20 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728838863333752922/RamuhsJudgementBolt.png"
+  },
+  {
+    "Name": "Ramuh’s Chaotic Strike",
+    "Effect": "Any movement you take is now in the direction of the player with the lowest score until you take any damage. If you are the player with the lowest score, you are instantly knocked out.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728839778405187584/RamuhsChaoticStrike.png"
+  },
+  {
+    "Name": "Ramuh’s Rolling Thunder",
+    "Effect": "An electric chain is created between the player with the highest score and the one with the lowest score. Anyone in between them takes 3 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728840036090511380/RamuhsRollingThunder.png"
+  },
+  {
+    "Name": "Leviathan’s Spinning Dive",
+    "Effect": "You and a player of your choice take 3 damage and move forward one space. If either of you lands in a damaging space, you both take an additional 3 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728879571625181214/LeviathansSpinningDIve.png"
+  },
+  {
+    "Name": "Leviathan’s Body Slam",
+    "Effect": "Roll for movement again. If you land in a damaging space, your points are reduced to 1 after taking damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728880214364520448/LeviathansBodySlam.png"
+  },
+  {
+    "Name": "Leviathan’s Tsunami",
+    "Effect": "The field is surrounded by a torrent of water for 6 rounds. By the end of the 6th round, everyone has their score reduced to 1. The effect is cancelled if healing spaces have been landed on three or more times before the end of the 6th round.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728880551200686099/LeviathansTsunami.png"
+  },
+  {
+    "Name": "Phoenix’s Revelation",
+    "Effect": "If this card is drawn a second time during this game, the person who drew it the second time takes 50 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728889952007356457/PhoenixRevelation.png"
+  },
+  {
+    "Name": "Phoenix’s Rebirth",
+    "Effect": "Any player who is currently unconscious is cured and comes back with 50 points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728891284156317756/PhoenixRebirth.png"
+  },
+  {
+    "Name": "Enkidu",
+    "Effect": "You take 7 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730625514368139294/Enkidu.png"
+  },
+  {
+    "Name": "Eureka",
+    "Effect": "Roll on the treasure table and then roll on the summon table again.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730627536022667284/Eureka.png"
+  },
+  {
+    "Name": "Sophia’s Gnosis",
+    "Effect": "You and another player of your choice get knocked back four spaces without activating effects.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728396855435591821/SophiasRealGnosis.png"
+  },
+  {
+    "Name": "Sophia’s Quasar",
+    "Effect": "Choose any space on the board. Every player moves four spaces in the direction of the space chosen without activating effects.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728397405493395507/SophiasRealQuasar.png"
+  },
+  {
+    "Name": "Sophia’s Cintamani",
+    "Effect": "Reduce everyone’s points by 3 (including yours.)",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728390568224489562/SophiasQuasar.png"
+  },
+  {
+    "Name": "Sophia’s Balance",
+    "Effect": "Everyone’s points are redistributed equally (rounded down.)",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728388842159210596/SophiasGnosis.png"
+  },
+  {
+    "Name": "Sophia’s Discordant Damnation",
+    "Effect": "Everyone's score becomes 30.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728395109678448660/SophiasDoubleDs.png"
+  },
+  {
+    "Name": "Nidhogg’s Deafening Blow",
+    "Effect": "Everyone takes 5 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728401127619428444/NiddysDeafeningRoar.png"
+  },
+  {
+    "Name": "Nidhogg’s Akh Morn",
+    "Effect": "Anyone who has dueled in the past 3 rounds takes 10 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728804942705590312/NidhoggAkhMhorn.png"
+  },
+  {
+    "Name": "Zurvan’s Ahura Mazda",
+    "Effect": "For two rounds, everyone's movement roll is reduced by 5 and takes damage equal to 3x their movement roll.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730522012396552292/ZurvanAhuraMazda.png"
+  },
+  {
+    "Name": "Zurvan’s Dragon Claw",
+    "Effect": "You and anyone behind you within 10 spaces gets knocked back by 5 spaces without activating effects and suffers 3 damage each.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730521462699720824/ZurvanDemonClaw.png"
+  },
+  {
+    "Name": "Zurvan’s Southern Cross",
+    "Effect": "An ice puddle is created where you stand, covering the adjacent spaces and itself. For one round, anyone else who lands or passes on these spaces is frozen and loses a turn.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730521464360534179/ZurvanSouthernCross.png"
+  },
+  {
+    "Name": "Ravana’s Bloody Fuller",
+    "Effect": "You become fettered to your current space. Each round you must try to roll 4 or higher or remain fettered and suffer 4 damage. Add 1 damage per round you remain fettered after the first.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730527151975038976/RavanasBloodyFuller.png"
+  },
+  {
+    "Name": "Ravana’s Warlord Shell",
+    "Effect": "You gain a carapace shield of 10 points that will protect you for 3 rounds or until the points reach 0.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730525963687035020/RavanasWarlordShell.png"
+  },
+  {
+    "Name": "Ravana’s Swift Liberation",
+    "Effect": "Ravana rushes to the player with the lowest score and deals 5 damage. Ravana then rushes forward through the board to the space of the player with the highest score and deals 10 damage to them and any players caught in the rush.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730526623165710376/RavanasSwiftLiberation.png"
+  },
+  {
+    "Name": "Bismarck’s Dragonkillers",
+    "Effect": "You and anyone within 10 spaces become chained to your current spot for one round. Lose one turn and take 4 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730528099904520292/BismarcksDragonkillers.png"
+  },
+  {
+    "Name": "Bismarck’s Control of the Skies",
+    "Effect": "Use the -aether command to change the current weather.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730529943540203660/BismarcksControlSkies.png"
+  },
+  {
+    "Name": "Bismarck’s Tornadoes",
+    "Effect": "Move back 3 spaces and lose your next turn.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730531915576377485/BismarcksTornadoes.png"
+  },
+  {
+    "Name": "King Thordan’s Ultimate End",
+    "Effect": "Everyone rolls /dice, if the result is lower than 5, move back 5 spaces without activating space effects and lose half your points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730538841466732645/KingThordan.png"
+  },
+  {
+    "Name": "Sephirot’s Ein Sof Ohr",
+    "Effect": "Roll /dice. Everyone else takes that much damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730540800521273377/SephirotEinSofOhr.png"
+  },
+  {
+    "Name": "Sephirot’s Ein Sof",
+    "Effect": "A growing orb spawns on the space that activated this effect. By the end of your next turn, anyone within 5 spaces of the activating space loses half their points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730542144128942221/SephirotEinSof.png"
+  },
+  {
+    "Name": "Lakshmi’s Stotram",
+    "Effect": "Everyone rolls /dice. Those who roll higher than 5 gain 10 points. Those who roll lower than 5 lose 10 points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730548574051500052/LakshimisStrotam.png"
+  },
+  {
+    "Name": "Lakshmi’s Chanchala",
+    "Effect": "For 2 rounds, you gain double points and deal double damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730549885585326080/LakshimiChanchala.png"
+  },
+  {
+    "Name": "Susano’s Stormsplitter",
+    "Effect": "Pick any player. That player takes 5 damage and takes double damage from attacks and other effects until the end of your next turn.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728413421250412634/SusanoStormsplitter.png"
+  },
+  {
+    "Name": "Susano’s Ama-no-iwato",
+    "Effect": "You are trapped in a chained stone. At the beginning of each of your turns, you must roll a 5 or lower to free yourself or lose a turn.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728715715774906388/SusanoAmaNoIwato.png"
+  },
+  {
+    "Name": "Susano’s Yata no Kagami",
+    "Effect": "The player with the highest score is pushed back to the starting space.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/728414662529384459/SusanoYatanoKahami.png"
+  },
+  {
+    "Name": "Shinryu’s Atomic Ray",
+    "Effect": "You lose half your points and then a player of your choice takes that much damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730562121808740442/ShinryusAtomicRay.png"
+  },
+  {
+    "Name": "Shinryu’s Protostar",
+    "Effect": "Everyone takes 5 damage for every player currently standing on a damaging space.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730563161014403144/ShinryusProtoStar.png"
+  },
+  {
+    "Name": "Byakko’s State of Shock",
+    "Effect": "You are transported to the same space as another player of your choice and both of you take 4 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730565554590711868/ByakkosStateofShock.png"
+  },
+  {
+    "Name": "Byakko’s Hundredfold Havoc",
+    "Effect": "Until the end of your next turn, everyone who rolls an even number for movement takes 4 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730568925359898634/ByakkosThunderfoldHavoc.png"
+  },
+  {
+    "Name": "Tsukuyomi’s Supreme Selenomancy",
+    "Effect": "Pick between even or odd. By the end of your 3rd turn, if you haven’t rolled the type of number you picked for your movement rolls, you lose all your points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730573059001548859/TsukuyomiSupremeSelenomancy.png"
+  },
+  {
+    "Name": "Tsukuyomi’s Midnight Rain",
+    "Effect": "Roll /dice. If you roll an even number, all damage spaces are turned into healing spaces until the end of your next turn. If you roll an odd number, all healing spaces are turned into damaging spaces instead.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730578334056054834/TsukuyomisMidnightRain.png"
+  },
+  {
+    "Name": "Suzaku’s Mesmerizing Melody",
+    "Effect": "All other players move 4 spaces towards you. If any of them land on your space, they lose half their points before dueling you.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730584118601056276/SuzakusMelody.png"
+  },
+  {
+    "Name": "Seiryu’s Summon Shiki",
+    "Effect": "A Shiki with a counter of 0 appears on this space. The space stops being a summon space for the duration of this effect. Each player that passes through this space takes 2 damage and the counter is increased by 2. When a player lands on this space, they gain all the points stored inside the Shiki and the effect ends.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730586439179436123/SeiryuShiki.png"
+  },
+  {
+    "Name": "Seiryu’s Cursekeeper",
+    "Effect": "Keep a counter of how much damage you take for 5 rounds. At the end of the 5th round, everyone else takes damage equal to that counter.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730589417248391208/SeiryuCursekeeper.png"
+  },
+  {
+    "Name": "Titania’s Fae Light",
+    "Effect": "Roll for damage. The person with the highest scores takes 3x that much damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730596321676755035/TitaniasFaeLight.png"
+  },
+  {
+    "Name": "Titania’s Runes",
+    "Effect": "All the players that have less points than you lose their treasures (if any.)",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730598580972290068/TitaniasRunes.png"
+  },
+  {
+    "Name": "Innocence’s Shadowreaver",
+    "Effect": "All players within 1 of damaging spaces take 4 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730591949924597850/InnocenceShadowreaver.png"
+  },
+  {
+    "Name": "Innocence’s Starbirth",
+    "Effect": "The player closest to the starting point loses half their points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730614777818120243/InnocenceStarbirth.png"
+  },
+  {
+    "Name": "Hades’s Ancient Double",
+    "Effect": "You gain an extra turn.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730623905030602882/HadesAncientDouble.png"
+  },
+  {
+    "Name": "Hades’s Dark Current",
+    "Effect": "All players not in a corner space take 5 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148123666612245/730623128828510218/HadesDarkCurrent.png"
+  }
+]

@@ -1,0 +1,197 @@
+[
+  {
+    "Name": "Vulnerability Up",
+    "Effect": "For 2 rounds, all damage is tripled.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730642075468431370/VulnerabilityUp.png"
+  },
+  {
+    "Name": "Consolation",
+    "Effect": "For 4 rounds, all damage spaces have no effect.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730643427615834132/Consolation.png"
+  },
+  {
+    "Name": "Earthly Star",
+    "Effect": "For 2 rounds, landing on a healing space heals 5 additional points and deals 5 damage to anyone else within 5 spaces of it. If no players have landed on a healing space during the duration, the effect is extended by 2 more rounds but healing 10 additional points and dealing 10 damage to anyone else within 5 spaces.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730645715663192084/EarthlyStar.png"
+  },
+  {
+    "Name": "The Burn",
+    "Effect": "For 2 rounds, summon spaces have no effect.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/728416597500231710/TheBurn.png"
+  },
+  {
+    "Name": "Heavy Aether",
+    "Effect": "For 2 rounds, all damage spaces also make you roll on the summon table.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/728418827045437540/HeavyAether.png"
+  },
+  {
+    "Name": "Mantra Field",
+    "Effect": "For 2 rounds, all healing from healing spaces is doubled.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730648327527596092/MantraField.png"
+  },
+  {
+    "Name": "Healing Wind",
+    "Effect": "For 3 rounds, everyone gains 5 points at the beginning of their turn unless they’re incapacitated.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730649702663585802/HealingWind.png"
+  },
+  {
+    "Name": "Pulse of Life",
+    "Effect": "Everyone gains 10 points and is cured of being incapacitated at the end of this round.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/728761994169155640/PulseOfLife.png"
+  },
+  {
+    "Name": "Landwaker",
+    "Effect": "For 2 rounds, no one can take damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/728417281062994011/Landwaker.png"
+  },
+  {
+    "Name": "Hidden Canals",
+    "Effect": "For 2 round, anyone who passes through a diversion space rolls on the treasure table unless they have two treasures already.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/733203351436656720/HiddenCanals.png"
+  },
+  {
+    "Name": "Rogues’ Guild",
+    "Effect": "Everyone loses their treasures at the end of this round.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/728405426223317042/RoguesGuild.png"
+  },
+  {
+    "Name": "Exdeath’s White Hole",
+    "Effect": "For 2 rounds, anyone who takes damage becomes petrified and loses their next turn.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/728409567540805742/NeoExDeathWH.png"
+  },
+  {
+    "Name": "Neo Exdeath’s Beyond Death",
+    "Effect": "For 3 rounds, anyone who becomes unconscious is cured immediately and gains 40 points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/728409012571340880/NeoExdeathBD.png"
+  },
+  {
+    "Name": "Halicarnassus's The Game",
+    "Effect": "For 3 rounds, all damage spaces turn you into a frog and make you roll again immediately.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/728441837249101874/HalicarnassusTheGame.png"
+  },
+  {
+    "Name": "Aspected Helios",
+    "Effect": "For 4 rounds, everyone gains 3 points at the end of their turn.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730650453842591774/AspectedHelios.png"
+  },
+  {
+    "Name": "Thrown for a Loop",
+    "Effect": "For 4 rounds, anyone who rolls under 5 loses their turn.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730651639265886298/ThrownForALoop.png"
+  },
+  {
+    "Name": "Gales",
+    "Effect": "For 5 rounds, everyone moves 1 extra space.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730652512163725392/Gales.png"
+  },
+  {
+    "Name": "Umbral Static",
+    "Effect": "For 5 rounds, passing by another player deals 1 damage to both players.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/728407713419362345/umbralstatic.png"
+  },
+  {
+    "Name": "Umbral Wind",
+    "Effect": "For 5 rounds, passing by another player makes you advance 1 extra space.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/728406772313882728/umbralwind.png"
+  },
+  {
+    "Name": "Gloom",
+    "Effect": "All the summon spaces become diversion spaces for 3 rounds.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/728415803963211841/Gloom.png"
+  },
+  {
+    "Name": "Radiant Plume",
+    "Effect": "For 3 rounds, all healing spaces become damage spaces.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730655702091169852/RadiantPlumes.png"
+  },
+  {
+    "Name": "Friction",
+    "Effect": "For 4 rounds, all healing spaces do not heal.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730656477789814805/Friction.png"
+  },
+  {
+    "Name": "Leniency",
+    "Effect": "For 4 rounds, passing by an incapacitated player revives them with 5 points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/728414774655844472/Leniency.png"
+  },
+  {
+    "Name": "Leniency",
+    "Effect": "For 4 rounds, passing by a player that has 10 or less points, instantly reduces them to 0 points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/728414776358862958/LeniencyEvil.png"
+  },
+  {
+    "Name": "Horoscope",
+    "Effect": "For 5 rounds, all healing effects heal for an additional 5 points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730657855325339659/Horoscope.png"
+  },
+  {
+    "Name": "Auroras",
+    "Effect": "For 4 rounds, all movement speed is reduced by 2. If your movement speed would become 0 because of this effect, you lose a turn.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/728671366814892052/Auroras.png"
+  },
+  {
+    "Name": "Darkness",
+    "Effect": "For 4 rounds, healing and damaging spaces have no effect.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730659729369464882/Darkness.png"
+  },
+  {
+    "Name": "Eruptions",
+    "Effect": "For 4 rounds, damaging spaces deal 1 extra damage and then make you move back one space.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730863023354544239/Eruptions.png"
+  },
+  {
+    "Name": "Heat Wave",
+    "Effect": "For 4 rounds, if you roll more than 5 in your movement roll, you take 2 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730866771065831496/HeatWave.png"
+  },
+  {
+    "Name": "Louring",
+    "Effect": "For 3 rounds, summon spaces become healing spaces.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/731398237310812220/Louring.png"
+  },
+  {
+    "Name": "Oppression",
+    "Effect": "For 4 rounds, players cannot be within 1 space of each other and doing so triggers a duel. Losing a duel knocks you back 2 spaces.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730893451280777366/Oppression.png"
+  },
+  {
+    "Name": "Quick Levin",
+    "Effect": "For 4 rounds, passing another player while moving for your turn makes you move 5 additional spaces.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730874971265695744/QuickLevin.png"
+  },
+  {
+    "Name": "Rough Seas",
+    "Effect": "For 4 rounds, if your score is an even number, you move forward for your movement roll. Otherwise, you move backward.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730904623371518013/RoughSeas.png"
+  },
+  {
+    "Name": "Royal Levin",
+    "Effect": "For 5 rounds, everyone gains +3 to damage rolls.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730886320158933002/RoyalLevin.png"
+  },
+  {
+    "Name": "Shelf Clouds",
+    "Effect": "For 4 rounds, players cannot duel each other. If a player lands on another player’s space, they move forward a space instead.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730899172148117624/Shelfclouds.png"
+  },
+  {
+    "Name": "Smoke",
+    "Effect": "For 4 rounds, players cannot target each other with effects that would do damage. Players can still duel.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730888934204244018/Smoke.png"
+  },
+  {
+    "Name": "Storm Clouds",
+    "Effect": "For 4 rounds, if you end your turn within 5 spaces of another player, you take 1 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730907733234155600/StormClouds.png"
+  },
+  {
+    "Name": "Tension",
+    "Effect": "For 5 rounds, duel damage is doubled.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730897028921688134/Tension.png"
+  },
+  {
+    "Name": "Dimensional Disruption",
+    "Effect": "For 4 rounds, landing in a space within 3 spaces of a summon space activates it instead of the normal effect.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148241597726730/730910022384615494/DimensionalDisruption.png"
+  }
+]

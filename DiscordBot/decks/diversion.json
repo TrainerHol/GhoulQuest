@@ -1,0 +1,177 @@
+[
+  {
+    "Name": "Minphilia’s Errands",
+    "Effect": "Minphilia appears and sends you on a fetch quest. You lose a turn.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728393583148924938/minphiliaserrands.png"
+  },
+  {
+    "Name": "Ceremony Invitation",
+    "Effect": "Pick any player. That player advances to your spot without activating the diversion space and then duels you.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728418170720747551/CeremonyInvitation.png"
+  },
+  {
+    "Name": "Accidental Summoning",
+    "Effect": "Roll on the summon table.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728419546502922311/AccidentalSummoning.png"
+  },
+  {
+    "Name": "Critical Healing",
+    "Effect": "The person with the lowest points gains 15 points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728394445354958878/overhealing.png"
+  },
+  {
+    "Name": "Overhealing",
+    "Effect": "You and the player with the highest score gain 10 points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728417665621688380/overhealing.png"
+  },
+  {
+    "Name": "Lominsan Anchovy",
+    "Effect": "A school of Lominsan anchovies surrounds you and intimidates the person behind you. That person moves back 3 spaces.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728410942471274557/LominsanAnchovie.png"
+  },
+  {
+    "Name": "Kupo Nuts",
+    "Effect": "You gain 5 points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728395967828852816/KupoNut.png"
+  },
+  {
+    "Name": "Cloud Mallow Seedlings",
+    "Effect": "Everyone is sprinkled with cloud mallow puffs and is motivated to advance 3 spaces without activating the space they land on.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728403150033125416/mallow_seeds.png"
+  },
+  {
+    "Name": "Whiskerwall Kupdi Koop",
+    "Effect": "You gain a shielding effect that absorbs 5 damage. Add one to the Mogglesguard counter. When this counter reaches 7, Good King Moggle Mog XII is summoned and casts Memento Moogle, damaging everyone for 50 points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728422828159795240/Whiskerwall.png"
+  },
+  {
+    "Name": "Woolywart Kupqu Kogi",
+    "Effect": "The player with the highest score takes 5 damage. Add one to the Mogglesguard counter. When this counter reaches 7, Good King Moggle Mog XII is summoned and casts Memento Moogle, damaging everyone for 50 points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728423553938096228/Woolywart.png"
+  },
+  {
+    "Name": "Pukla Puki the Pomburner",
+    "Effect": "Pukla Puki casts Pomflare on a player of your choice and everyone within 5 spaces of them, damaging them for 3 points. Add one to the Mogglesguard counter. When this counter reaches 7, Good King Moggle Mog XII is summoned and casts Memento Moogle, damaging everyone for 50 points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728425195240685568/PuklaPuki.png"
+  },
+  {
+    "Name": "Pukna Pako the Tailturner",
+    "Effect": "Pick a player and steal a treasure from them. If there are no players with treasures, roll on the treasure table. Add one to the Mogglesguard counter. When this counter reaches 7, Good King Moggle Mog XII is summoned and casts Memento Moogle, damaging everyone for 50 points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728425619133562990/PuknaPako.png"
+  },
+  {
+    "Name": "Furryfoot Kuplu Kipp",
+    "Effect": "Kuplu Kipp casts Cure III on you. You and everyone within 3 spaces gain 15 points. Add one to the Mogglesguard counter. When this counter reaches 7, Good King Moggle Mog XII is summoned and casts Memento Moogle, damaging everyone for 50 points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728426272048414730/Furryfoot.png"
+  },
+  {
+    "Name": "Ruffletuft Kupta Kapa",
+    "Effect": "Kupta Kapa uses Moogle-Go-Round on everyone. Everyone moves forward to the space of the player in front of them without activating the spaces. Add one to the Mogglesguard counter. When this counter reaches 7, Good King Moggle Mog XII is summoned and casts Memento Moogle, damaging everyone for 50 points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728426673590108211/Ruffletuft.png"
+  },
+  {
+    "Name": "Puksi Piko the Shaggysong",
+    "Effect": "Puksi Piko plays a song for you. All healing you receive and damage you take is increased by 2 points for 2 rounds. Add one to the Mogglesguard counter. When this counter reaches 7, Good King Moggle Mog XII is summoned and casts Memento Moogle, damaging everyone for 50 points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728427069817487500/PuksiPiko.png"
+  },
+  {
+    "Name": "Great Gold Whisker",
+    "Effect": "You may discard one treasure and then roll on the treasure table. You can discard it once again and roll again, but you must keep the new one.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728403714280390656/GreatGoldWhisker.png"
+  },
+  {
+    "Name": "Tonberry Stalker",
+    "Effect": "The player ahead of you takes 5 damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728399244440109106/TonberryStalker.png"
+  },
+  {
+    "Name": "Hail to the King",
+    "Effect": "The Mogglesguard counter is doubled.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728447908449353818/HailToTheKing.png"
+  },
+  {
+    "Name": "Jackpot",
+    "Effect": "During your next turn, you gain 3 points for each space you advance.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728449338510147584/Jackpot.png"
+  },
+  {
+    "Name": "Hunt Bill",
+    "Effect": "Pick any player other than yourself. During the next 6 rounds if the player is knocked unconscious, you gain 15 points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728450671023620177/HuntBill.png"
+  },
+  {
+    "Name": "Kupo Nut Sack",
+    "Effect": "You gain 6 points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728473139733856266/KupoNutSack.png"
+  },
+  {
+    "Name": "Montblanc",
+    "Effect": "Montblanc takes you to the Prima Vista to see a play. You lose a turn.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728456928040189972/Montblanc.png"
+  },
+  {
+    "Name": "Mogmill",
+    "Effect": "Mogmill challenges you to a triple triad match. Roll /dice. If you roll 5 or above, you gain points equal to half your current points. If you roll below 5, you lose points equal to half your current points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728461122285469806/Mogmill.png"
+  },
+  {
+    "Name": "Delivery Moogle",
+    "Effect": "You lose 5 points and then roll on the treasure table.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728462274125365261/DeliveryMoogle.png"
+  },
+  {
+    "Name": "Moogle Cap",
+    "Effect": "For the remainder of the game, you gain 3 points every time you land on a diversion space. The effect does not stack if you draw this card again.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728463303512293417/MoogleCap.png"
+  },
+  {
+    "Name": "Moogle Costume",
+    "Effect": "This card acts as a treasure but does not count for your 2 treasure limit. You can activate this card when you land on a summoning space. You roll on the diversion deck instead of the summoning table.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728465019485945917/MoogleCostume.png"
+  },
+  {
+    "Name": "Bridesmoogle",
+    "Effect": "Select a player and move them to any other player’s space without triggering the space’s effect.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728466451878641694/Bridesmoogle.png"
+  },
+  {
+    "Name": "Taoist Moogle",
+    "Effect": "Send a taoist moogle to any player of your choosing. The player duels the moogle. You roll damage for the moogle, but no points are lost or gained if the other player wins the duel.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728468270398701588/TaoistMoogle.png"
+  },
+  {
+    "Name": "Kupo Nut Charm",
+    "Effect": "You gain points equal to the Mooglesguard counter multiplied by 3. If the Mooglesguard counter is 0, you lose 3 points instead. After that, the moogle counter is increased by 1. When this counter reaches 7, Good King Moggle Mog XII is summoned and casts Memento Moogle, damaging everyone for 50 points.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728477228987580486/KupoNutCharm.png"
+  },
+  {
+    "Name": "Exploding Kupo Nut",
+    "Effect": "The moogles trick you and give you an exploding kupo nut. The next time you take damage, the kupo nut explodes and makes you take double that damage.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728479024262676541/ExplodingKupoNut.png"
+  },
+  {
+    "Name": "Chocobokeep",
+    "Effect": "For 3 points, a friendly chocobo can take you to the next diversion space without activating it.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728480831022039110/Chocobokeep.png"
+  },
+  {
+    "Name": "Bosom Buddies",
+    "Effect": "Summon a chocobo companion. For 3 rounds, you gain 1 point per space advanced.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728483478714318918/BossomBuddies.png"
+  },
+  {
+    "Name": "Chocobo Race",
+    "Effect": "Everyone does /dice, the highest roll gains 10 points and advances 3 spaces without activating the space they land on.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/731409388765446274/ChocoboRace.png"
+  },
+  {
+    "Name": "Seigetsu’s Enlightenment",
+    "Effect": "For 3 rounds you can choose whether or not to activate any spaces you land on, instead of them activating immediately.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728484202063855706/Seigetsu.png"
+  },
+  {
+    "Name": "Edda’s Descent into Madness",
+    "Effect": "For 10 rounds, you must pass next to an incapacitated player or take 10 damage at the 10th round of this effect.",
+    "ImageURL": "https://cdn.discordapp.com/attachments/728148169283731528/728440523278254080/EddasDescentIntoMadness.png"
+  }
+]

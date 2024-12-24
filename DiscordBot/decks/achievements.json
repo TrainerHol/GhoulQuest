@@ -1,0 +1,62 @@
+[
+  {
+    "Achievement": "Treasure Hunter",
+    "Objective": "Land on Treasure spaces 3 times. After that, landing on Treasure spaces gives you 5 extra points."
+  },
+  {
+    "Achievement": "Skywatcher",
+    "Objective": "Land on Aether spaces once. After that, you can also roll on the -aether table when passing the Start space."
+  },
+  {
+    "Achievement": "The Necromancer",
+    "Objective": "Have your points reach 0. After that, the first time you are knocked out, you come back with 30 points immediately."
+  },
+  {
+    "Achievement": "Duelist",
+    "Objective": "Participate in 10 duels. After that, you gain +1 to all of your attack rolls."
+  },
+  {
+    "Achievement": "Heretic",
+    "Objective": "Land on Summon spaces 3 times. After that, landing on Summon spaces gives you 5 points."
+  },
+  {
+    "Achievement": "Pom Friend",
+    "Objective": "Land on Diversion spaces 3 times. After that, landing on Diversion spaces gives you 5 points."
+  },
+  {
+    "Achievement": "Warmonger",
+    "Objective": "Gain a total of 15 points from duels. After that, winning a duel gives you 5 extra points."
+  },
+  {
+    "Achievement": "The Alpha Wolf",
+    "Objective": "Win 7 duels. After that, winning a duel gives you 5 extra points."
+  },
+  {
+    "Achievement": "Raiser of Mountains",
+    "Objective": "Pass the Start space 2 times. After that, healing spaces give you 1 extra point."
+  },
+  {
+    "Achievement": "The Unmoving",
+    "Objective": "Roll a 0 for movement 3 times. After that, gain +2 to all movement rolls."
+  },
+  {
+    "Achievement": "Seeker of Blood",
+    "Objective": "Knock out a player with a duel. After that, knocking out a player gives you 15 points."
+  },
+  {
+    "Achievement": "The Lucky",
+    "Objective": "Land on the Start space. After that, passing the start space gives you 30 points instead of 20."
+  },
+  {
+    "Achievement": "The Meatshield",
+    "Objective": "Lose a total of 15 points from duels. After that, losing a duel gives you 5 points."
+  },
+  {
+    "Achievement": "Calamatologist",
+    "Objective": "Lose 7 duels. After that, losing a duel gives you 5 points."
+  },
+  {
+    "Achievement": "Gambler",
+    "Objective": "Gamble at the Start space twice. After that, you can gamble at the Start space for free instead of gaining points."
+  }
+]

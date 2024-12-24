@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ghoul Quest Tool</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="title">
+          <img src="img/ghoulemblem.png" alt="Ghoul Quest Logo" class="logo" />
+          <h1>Ghoul Quest</h1>
+        </div>
+        <div class="controls">
+          <div class="player-count">
+            <label for="playerCount">Players:</label>
+            <input type="number" id="playerCount" min="2" max="8" value="4" />
+          </div>
+          <div class="game-controls">
+            <button id="undoBtn">↩ Undo</button>
+            <button id="redoBtn">↪ Redo</button>
+            <button id="nextRoundBtn">Next Round</button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="round-info">
+          <h3>Round: <span id="currentRound">1</span></h3>
+        </div>
+
+        <div class="players-container">
+          <div class="players-list" id="playersList">
+            <!-- Players will be added here dynamically -->
+          </div>
+        </div>
+
+        <div class="effect-manager">
+          <div class="effect-header">
+            <h3>Active Effects</h3>
+            <button id="addEffectBtn">+ Add Effect</button>
+          </div>
+          <div class="active-effects" id="activeEffects">
+            <!-- Active effects will be listed here -->
+          </div>
+        </div>
+
+        <!-- Effect Selection Modal -->
+        <div id="effectModal" class="modal">
+          <div class="modal-content">
+            <h2>Add Effect</h2>
+            <div class="effect-search">
+              <input type="text" id="effectSearch" placeholder="Search effects..." />
+              <select id="effectTarget">
+                <option value="all">All Players</option>
+                <!-- Player options will be added dynamically -->
+              </select>
+            </div>
+            <div class="custom-effect">
+              <input type="text" id="customEffectDescription" placeholder="Custom effect description..." />
+              <input type="number" id="customEffectRounds" placeholder="Rounds" min="1" value="1" />
+              <button onclick="addCustomEffect()">Add Custom</button>
+            </div>
+            <div class="effect-list" id="effectList">
+              <!-- Effects will be populated here -->
+            </div>
+            <button id="closeEffectModal">Cancel</button>
+          </div>
+        </div>
+
+        <!-- Treasure Selection Modal -->
+        <div id="treasureModal" class="modal">
+          <div class="modal-content">
+            <h2>Select Treasure</h2>
+            <div class="treasure-search">
+              <input type="text" id="treasureSearch" placeholder="Search treasures..." />
+            </div>
+            <div class="treasure-list" id="treasureList">
+              <!-- Treasures will be populated here -->
+            </div>
+            <button id="closeTreasureModal">Cancel</button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
