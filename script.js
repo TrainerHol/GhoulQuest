@@ -209,11 +209,53 @@ function renderPlayers() {
         <div class="treasures">
           <div class="treasure-slot ${!player.treasures[0] ? "empty" : ""}" 
                onclick="openTreasureModal(${index}, 0)">
-            ${player.treasures[0] ? renderTreasure(player.treasures[0]) : "Add Treasure"}
+            ${
+              player.treasures[0]
+                ? `
+              <div class="treasure-info">
+                <button class="remove-treasure" onclick="event.stopPropagation(); removeTreasure(${index}, 0)">×</button>
+                <h4>${player.treasures[0].Name}</h4>
+                <p>${player.treasures[0].Effect}</p>
+                ${
+                  player.treasures[0].roundsLeft
+                    ? `
+                    <div class="effect-counter">
+                        <label>Rounds:</label>
+                        <input type="number" value="${player.treasures[0].roundsLeft}" min="0" 
+                               onchange="updateTreasureRounds(${index}, 0, this.value)">
+                    </div>
+                `
+                    : ""
+                }
+              </div>
+            `
+                : "Add Treasure"
+            }
           </div>
           <div class="treasure-slot ${!player.treasures[1] ? "empty" : ""}" 
                onclick="openTreasureModal(${index}, 1)">
-            ${player.treasures[1] ? renderTreasure(player.treasures[1]) : "Add Treasure"}
+            ${
+              player.treasures[1]
+                ? `
+              <div class="treasure-info">
+                <button class="remove-treasure" onclick="event.stopPropagation(); removeTreasure(${index}, 1)">×</button>
+                <h4>${player.treasures[1].Name}</h4>
+                <p>${player.treasures[1].Effect}</p>
+                ${
+                  player.treasures[1].roundsLeft
+                    ? `
+                    <div class="effect-counter">
+                        <label>Rounds:</label>
+                        <input type="number" value="${player.treasures[1].roundsLeft}" min="0" 
+                               onchange="updateTreasureRounds(${index}, 1, this.value)">
+                    </div>
+                `
+                    : ""
+                }
+              </div>
+            `
+                : "Add Treasure"
+            }
           </div>
         </div>
       </div>
@@ -635,6 +677,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Load default map
   loadMap("ghoulquestclassic");
+
+  // Add event listeners for deck buttons
+  document.getElementById("drawAetherBtn").addEventListener("click", () => drawFromDeck("aether"));
+  document.getElementById("drawDiversionBtn").addEventListener("click", () => drawFromDeck("diversion"));
+  document.getElementById("drawSummonBtn").addEventListener("click", () => drawFromDeck("summon"));
+  document.getElementById("drawTreasureBtn").addEventListener("click", () => drawFromDeck("treasure"));
 });
 
 // Helper functions
@@ -1179,4 +1227,41 @@ function getContrastColor(bgColor) {
   const b = parseInt(bgColor.slice(5, 7), 16);
   const brightness = (r * 299 + g * 587 + b * 114) / 1000;
   return brightness > 128 ? "#000" : "#fff";
+}
+
+function removeTreasure(playerIndex, slotIndex) {
+  gameState.players[playerIndex].treasures[slotIndex] = null;
+  renderPlayers();
+  saveState();
+}
+
+function drawFromDeck(deckType) {
+  const deck = gameState.deckData[deckType];
+  if (!deck || deck.length === 0) return;
+
+  const randomIndex = Math.floor(Math.random() * deck.length);
+  const card = deck[randomIndex];
+
+  // Create modal to show the drawn card
+  const modal = document.createElement("div");
+  modal.className = "modal";
+  modal.style.display = "block";
+  modal.innerHTML = `
+    <div class="modal-content">
+      <h2>Drew from ${deckType} deck</h2>
+      <div class="drawn-card ${deckType}">
+        <h3>${card.Name}</h3>
+        <p>${card.Effect}</p>
+      </div>
+      <button onclick="this.closest('.modal').remove()">Close</button>
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  // Close modal when clicking outside
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.remove();
+    }
+  });
 }

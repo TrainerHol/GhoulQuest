@@ -22,6 +22,12 @@
             <button id="undoBtn">↩ Undo</button>
             <button id="redoBtn">↪ Redo</button>
             <button id="nextRoundBtn">Next Round</button>
+            <div class="deck-buttons">
+              <button id="drawAetherBtn" class="deck-btn aether">Draw Aether</button>
+              <button id="drawDiversionBtn" class="deck-btn diversion">Draw Diversion</button>
+              <button id="drawSummonBtn" class="deck-btn summon">Draw Summon</button>
+              <button id="drawTreasureBtn" class="deck-btn treasure">Draw Treasure</button>
+            </div>
           </div>
         </div>
       </header>
@@ -53,11 +59,11 @@
             <h3>Game Map</h3>
             <div class="map-controls">
               <select id="mapSelect">
-                <option value="custom">Custom Map</option>
                 <option value="ghoulquestclassic">Classic</option>
                 <option value="ghoulquestforest">Forest</option>
                 <option value="ghoulquestsiege">Siege</option>
                 <option value="ghoulquestlarge">Large</option>
+                <option value="custom">Custom Map</option>
               </select>
               <input type="file" id="customMapInput" accept=".json" style="display: none" />
               <button id="loadCustomMapBtn">Load Custom</button>
