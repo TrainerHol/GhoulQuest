@@ -132,7 +132,6 @@
       "isStart": false,
       "connections": [
         12,
-        35,
         10
       ]
     },
@@ -344,7 +343,8 @@
       "connections": [
         28,
         25,
-        30
+        30,
+        33
       ]
     },
     {
@@ -392,7 +392,8 @@
       "isStart": false,
       "connections": [
         32,
-        34
+        34,
+        29
       ]
     },
     {
@@ -416,8 +417,7 @@
       "connections": [
         10,
         34,
-        31,
-        11
+        31
       ]
     }
   ]
